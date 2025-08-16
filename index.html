@@ -27,8 +27,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: rgb(0, 0, 0);
-      font-size: 3rem;
+      transition: all 0.2s ease;
     }
   </style>
 </head>
@@ -37,6 +36,18 @@
   <div class="webgl-content">
     <div class="fullscreen-game" id="gameContainer"></div>
   </div>
+
+  <script>
+        const resizeGame = document.querySelector('#gameContainer');
+        
+        window.addEventListener('resize', () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            resizeDiv.style.width = `${width}px`;
+            resizeDiv.style.height = `${height}px`;
+        });
+    </script>
 </body>
 
 </html>
